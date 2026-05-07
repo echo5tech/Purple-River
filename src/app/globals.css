@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand color tokens */
+  --color-pr-indigo-950: #0a0b14;
+  --color-pr-indigo-900: #14132b;
+  --color-pr-indigo-800: #1e1b4b;
+  --color-pr-blue-600: #4f46e5;
+  --color-pr-blue-500: #6366f1;
+  --color-pr-cyan-400: #22d3ee;
+  --color-pr-cyan-300: #67e8f9;
+  --color-pr-lavender-300: #c4b5fd;
+  --color-pr-lavender-200: #ddd6fe;
+  --color-pr-fog-50: #f5f3ff;
+  --color-pr-ink-900: #0f172a;
+  --color-pr-ink-500: #64748b;
+
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Raw CSS custom properties for non-Tailwind usage */
+:root {
+  --pr-indigo-950: #0a0b14;
+  --pr-indigo-900: #14132b;
+  --pr-indigo-800: #1e1b4b;
+  --pr-blue-600: #4f46e5;
+  --pr-blue-500: #6366f1;
+  --pr-cyan-400: #22d3ee;
+  --pr-cyan-300: #67e8f9;
+  --pr-lavender-300: #c4b5fd;
+  --pr-lavender-200: #ddd6fe;
+  --pr-fog-50: #f5f3ff;
+  --pr-ink-900: #0f172a;
+  --pr-ink-500: #64748b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--pr-indigo-950);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--pr-cyan-400);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* River flow animation */
+@keyframes river-drift {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(40px) translateY(-20px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.3;
+  }
+}
+
+@keyframes river-flow {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-river-drift {
+  animation: river-drift 12s ease-in-out infinite;
+}
+
+.animate-river-drift-slow {
+  animation: river-drift 18s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Prose styles for MDX */
+.prose-dark h1,
+.prose-dark h2,
+.prose-dark h3,
+.prose-dark h4 {
+  font-family: var(--font-display);
+  color: #f1f5f9;
+  font-weight: 700;
+}
+
+.prose-dark p {
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+.prose-dark a {
+  color: var(--pr-cyan-400);
+}
+
+.prose-dark a:hover {
+  color: var(--pr-cyan-300);
+}
+
+.prose-dark ul,
+.prose-dark ol {
+  color: #cbd5e1;
+}
+
+.prose-dark blockquote {
+  border-left: 4px solid var(--pr-lavender-300);
+  padding-left: 1rem;
+  color: var(--pr-lavender-200);
+  font-style: italic;
+}
+
+.prose-dark code {
+  background-color: var(--pr-indigo-800);
+  color: var(--pr-cyan-300);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
