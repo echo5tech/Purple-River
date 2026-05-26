@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 pt-24 pb-20">
         <div className="max-w-4xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-pr-lavender-300/30 bg-pr-indigo-800/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-pr-lavender-300 mb-8">
-            Hermitage, Tennessee · Public Benefit Corporation
+            Nashville, Tennessee · Public Benefit Corporation
           </span>
 
           <h1
