@@ -28,7 +28,7 @@ export default function Footer() {
             <Logo height={32} />
             <p className="mt-4 text-sm text-slate-400 leading-relaxed max-w-xs">
               Enterprise-grade cybersecurity for the missions that need it most.
-              Hermitage, Tennessee.
+              Nashville, Tennessee.
             </p>
             <div className="mt-4 flex items-center gap-2 text-xs text-pr-lavender-300">
               <Shield size={12} />

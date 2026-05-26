@@ -47,7 +47,7 @@ export default function Image() {
           }}
         >
           <span style={{ color: '#C4B5FD', fontSize: '14px', fontWeight: 600 }}>
-            Purple River, PBC · Hermitage, Tennessee
+            Purple River, PBC · Nashville, Tennessee
           </span>
         </div>
 
