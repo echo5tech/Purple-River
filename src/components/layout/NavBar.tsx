@@ -19,7 +19,7 @@ export default function NavBar() {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
+    const onScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -33,10 +33,11 @@ export default function NavBar() {
   return (
     <header
       className={[
-        'fixed inset-x-0 top-0 z-50 transition-all duration-300',
+        'fixed inset-x-0 top-0 z-50 transition-all duration-500',
+        'backdrop-blur-xl -webkit-backdrop-filter-blur-xl',
         scrolled
-          ? 'bg-pr-indigo-900/95 backdrop-blur-md border-b border-pr-indigo-800 shadow-lg shadow-black/20'
-          : 'bg-transparent',
+          ? 'bg-pr-indigo-950/80 border-b border-white/[0.06] shadow-lg shadow-black/30'
+          : 'bg-pr-indigo-950/60 border-b border-white/[0.04]',
       ].join(' ')}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
@@ -48,7 +49,7 @@ export default function NavBar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200"
+              className="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-200 tracking-[-0.01em]"
             >
               {link.label}
             </Link>
@@ -68,7 +69,7 @@ export default function NavBar() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen(!open)}
-          className="lg:hidden p-2 text-slate-300 hover:text-white transition-colors"
+          className="lg:hidden p-2 text-slate-400 hover:text-white transition-colors"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -78,7 +79,7 @@ export default function NavBar() {
       {open && (
         <div
           id="mobile-menu"
-          className="lg:hidden bg-pr-indigo-900 border-t border-pr-indigo-800"
+          className="lg:hidden border-t border-white/[0.06] bg-pr-indigo-950/95 backdrop-blur-xl"
         >
           <nav aria-label="Mobile navigation" className="flex flex-col px-6 py-4 gap-1">
             {navLinks.map((link) => (
@@ -86,7 +87,7 @@ export default function NavBar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="py-3 text-base font-medium text-slate-300 hover:text-white border-b border-pr-indigo-800 last:border-0 transition-colors"
+                className="py-3 text-base font-medium text-slate-300 hover:text-white border-b border-white/[0.05] last:border-0 transition-colors"
               >
                 {link.label}
               </Link>

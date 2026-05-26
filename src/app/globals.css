@@ -16,12 +16,13 @@
   --color-pr-ink-900: #0f172a;
   --color-pr-ink-500: #64748b;
 
-  /* Typography */
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  /* Typography — Geist unified family */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "Cascadia Code", monospace;
 }
 
-/* Raw CSS custom properties for non-Tailwind usage */
+/* Raw CSS custom properties */
 :root {
   --pr-indigo-950: #0a0b14;
   --pr-indigo-900: #14132b;
@@ -37,6 +38,41 @@
   --pr-ink-500: #64748b;
 }
 
+/* ─── Custom utilities ─────────────────────────────────────────── */
+
+/* Dot grid background — subtle depth layer */
+@utility bg-grid-dots {
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.055) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+/* Glass card surface */
+@utility glass-card {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+/* Glow variants */
+@utility glow-indigo {
+  box-shadow:
+    0 0 20px rgba(79, 70, 229, 0.45),
+    0 0 60px rgba(79, 70, 229, 0.15);
+}
+
+@utility glow-cyan {
+  box-shadow:
+    0 0 16px rgba(34, 211, 238, 0.35),
+    0 0 40px rgba(34, 211, 238, 0.1);
+}
+
+/* ─── Base ─────────────────────────────────────────────────────── */
+
 html {
   scroll-behavior: smooth;
 }
@@ -49,14 +85,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Focus ring */
 :focus-visible {
   outline: 2px solid var(--pr-cyan-400);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* River flow animation */
+/* ─── Animations ───────────────────────────────────────────────── */
+
 @keyframes river-drift {
   0% {
     transform: translateX(0) translateY(0);
@@ -72,33 +108,15 @@ body {
   }
 }
 
-@keyframes river-flow {
-  0% {
-    stroke-dashoffset: 1000;
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    opacity: 0;
-  }
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@keyframes glow-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 .animate-river-drift {
@@ -115,7 +133,12 @@ body {
   animation: gradient-shift 8s ease infinite;
 }
 
-/* Tailwind Typography overrides for dark MDX prose */
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* ─── Prose (MDX) ──────────────────────────────────────────────── */
+
 .prose {
   --tw-prose-body: #cbd5e1;
   --tw-prose-headings: #f1f5f9;
@@ -141,6 +164,7 @@ body {
 .prose h4 {
   font-family: var(--font-display);
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .prose a {
@@ -154,11 +178,12 @@ body {
 }
 
 .prose :not(pre) > code {
-  background-color: var(--pr-indigo-800);
+  background-color: rgba(30, 27, 75, 0.8);
   color: var(--pr-cyan-300);
-  padding: 0.125rem 0.375rem;
+  padding: 0.125rem 0.4rem;
   border-radius: 0.25rem;
   font-size: 0.875em;
+  font-family: var(--font-mono);
 }
 
 .prose blockquote {

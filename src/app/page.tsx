@@ -25,11 +25,11 @@ export default function HomePage() {
       <PBCBlock />
 
       {/* Final CTA */}
-      <Section className="relative overflow-hidden bg-pr-indigo-900">
+      <Section className="relative overflow-hidden bg-pr-indigo-950 bg-grid-dots">
         <RiverFlow intensity="subtle" />
         <div className="relative max-w-2xl mx-auto text-center">
           <EyebrowLabel>Ready to Start?</EyebrowLabel>
-          <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="mt-4 font-display font-bold text-white tracking-[-0.04em]" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', lineHeight: 1.08 }}>
             The current&apos;s already moving.
             <br />
             <span
@@ -43,7 +43,7 @@ export default function HomePage() {
               Join us.
             </span>
           </h2>
-          <p className="mt-4 text-slate-400 text-lg max-w-xl mx-auto">
+          <p className="mt-4 text-slate-400 text-lg max-w-xl mx-auto font-light tracking-[-0.01em]">
             Get updates as products ship and as we open new mission partner spots.
           </p>
           <div className="mt-8">
