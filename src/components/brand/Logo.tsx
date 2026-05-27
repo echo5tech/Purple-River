@@ -7,23 +7,21 @@ type LogoProps = {
   linkWrapper?: boolean
 }
 
-export default function Logo({ theme = 'dark', height = 32, linkWrapper = true }: LogoProps) {
+export default function Logo({ theme = 'dark', height = 40, linkWrapper = true }: LogoProps) {
   const src =
     theme === 'dark'
       ? '/brand/purple_river_logo_dark.PNG'
       : '/brand/purple_river_logo_light.PNG'
 
-  const width = Math.round(height * 3.5)
-
   const img = (
     <Image
       src={src}
       alt="Purple River"
-      width={width}
+      width={height}
       height={height}
       priority
-      className="object-contain"
-      style={{ height, width: 'auto' }}
+      unoptimized
+      style={{ height, width: 'auto', maxWidth: 'none' }}
     />
   )
 
@@ -35,3 +33,4 @@ export default function Logo({ theme = 'dark', height = 32, linkWrapper = true }
     </Link>
   )
 }
+
