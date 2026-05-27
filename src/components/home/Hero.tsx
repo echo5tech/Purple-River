@@ -76,21 +76,19 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-white/[0.06] rounded-2xl overflow-hidden bg-white/[0.06]">
-          {stats.map((stat) => (
+        <div className="mt-20 pt-10 border-t border-white/[0.06] grid grid-cols-1 sm:grid-cols-3">
+          {stats.map((stat, i) => (
             <div
               key={stat.value}
-              className="bg-pr-indigo-950/70 backdrop-blur-xl px-8 py-7 flex flex-col gap-1"
+              className={`py-4 ${i > 0 ? 'sm:border-l sm:border-white/[0.06] sm:pl-10' : 'sm:pr-10'}`}
             >
               <span
-                className="font-display font-bold tracking-[-0.02em] text-white"
-                style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1 }}
+                className="block font-display font-bold text-white"
+                style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)', lineHeight: 1, letterSpacing: '-0.02em' }}
               >
                 {stat.value}
               </span>
-              <span className="text-sm text-slate-500">
-                {stat.label}
-              </span>
+              <span className="block text-sm text-slate-500 mt-2.5">{stat.label}</span>
             </div>
           ))}
         </div>

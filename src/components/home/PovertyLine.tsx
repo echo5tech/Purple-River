@@ -5,106 +5,103 @@ import { ShieldAlert, ShieldCheck, ArrowRight } from 'lucide-react'
 const enterpriseItems = [
   'Dedicated security operations teams',
   'Seven-figure annual security budgets',
-  'Enterprise tool sprawl across 50+ vendors',
   'Full-time CISOs with regulatory teams',
+  'Enterprise tool sprawl across 50+ vendors',
   'Incident response on retainer 24/7',
+  'Cyber insurance with active monitoring requirements',
 ]
 
 const nonprofitItems = [
-  '1.8M+ U.S. non-profits below the line',
   'Donor records, beneficiary data, family PII',
   'Zero dedicated IT security staff',
   'No security budget line in the annual plan',
   'Volunteers cycling in and out of shared accounts',
+  'Same ransomware exposure as a hospital',
+  '1.8M+ U.S. organizations in this position',
 ]
 
 export default function PovertyLine() {
   return (
     <Section id="poverty-line" className="bg-grid-dots">
-      <div className="text-center mb-16">
+      <div className="max-w-2xl mb-16">
         <EyebrowLabel>The Problem</EyebrowLabel>
-        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-white tracking-[-0.01em]">
+        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-white tracking-[-0.02em]">
           The Security Poverty Line
         </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">
+        <p className="mt-4 text-slate-400 text-lg leading-relaxed">
           The threshold below which organizations face real threats — ransomware, phishing,
-          data theft — without the tools or staff to respond. Most non-profits have always
-          been below it.
+          data theft — without the tools or staff to respond.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 relative">
-        {/* Enterprise card */}
-        <div className="rounded-2xl border border-white/[0.07] bg-white/[0.03] backdrop-blur-xl p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-pr-blue-600/15 border border-pr-blue-600/20">
-              <ShieldCheck size={20} className="text-pr-blue-500" />
-            </div>
-            <div>
-              <p className="text-xs font-mono font-medium uppercase tracking-widest text-pr-ink-500">
-                Fortune 500 Reality
-              </p>
-              <h3 className="font-display text-xl font-bold text-white tracking-[-0.01em]">
-                Enterprise Security
-              </h3>
-            </div>
-          </div>
-          <ul className="space-y-3">
-            {enterpriseItems.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-slate-300 text-sm">
-                <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-pr-blue-500/60" />
-                {item}
-              </li>
-            ))}
-          </ul>
+      {/* Above the line */}
+      <div className="mb-12">
+        <div className="flex items-center gap-2.5 mb-6">
+          <ShieldCheck size={16} className="text-pr-blue-500" />
+          <p className="text-xs font-mono font-semibold uppercase tracking-widest text-pr-blue-500">
+            Fortune 500 — Above the Line
+          </p>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-3">
+          {enterpriseItems.map((item) => (
+            <p key={item} className="text-sm text-slate-400 flex items-start gap-2.5">
+              <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-pr-blue-500/50" />
+              {item}
+            </p>
+          ))}
+        </div>
+      </div>
 
-        {/* Bridge indicator */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-2">
+      {/* The Line */}
+      <div className="relative flex items-center gap-5 my-4">
+        <div
+          className="flex-1 h-px"
+          style={{ background: 'linear-gradient(90deg, transparent, rgba(34,211,238,0.5) 40%, rgba(34,211,238,0.5))' }}
+        />
+        <div className="flex items-center gap-3 shrink-0">
           <div
-            className="flex h-14 w-14 items-center justify-center rounded-full font-display font-bold text-sm text-pr-cyan-400 border border-pr-cyan-400/30"
+            className="flex h-11 w-11 items-center justify-center rounded-full font-display font-bold text-sm text-pr-cyan-400 border border-pr-cyan-400/40"
             style={{
-              background: 'rgba(10,11,20,0.9)',
-              backdropFilter: 'blur(16px)',
-              boxShadow: '0 0 32px rgba(34,211,238,0.2), inset 0 1px 0 rgba(255,255,255,0.06)',
+              background: 'rgba(10,11,20,0.97)',
+              boxShadow: '0 0 24px rgba(34,211,238,0.25), inset 0 1px 0 rgba(255,255,255,0.06)',
             }}
           >
             PR
           </div>
+          <span className="text-xs font-mono font-semibold uppercase tracking-widest text-pr-cyan-400 whitespace-nowrap">
+            Security Poverty Line
+          </span>
         </div>
+        <div
+          className="flex-1 h-px"
+          style={{ background: 'linear-gradient(270deg, transparent, rgba(34,211,238,0.5) 40%, rgba(34,211,238,0.5))' }}
+        />
+      </div>
 
-        {/* Non-profit card */}
-        <div className="rounded-2xl border border-red-500/20 bg-red-950/10 backdrop-blur-xl p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-500/10 border border-red-500/20">
-              <ShieldAlert size={20} className="text-red-400" />
-            </div>
-            <div>
-              <p className="text-xs font-mono font-medium uppercase tracking-widest text-pr-ink-500">
-                Non-Profit Reality
-              </p>
-              <h3 className="font-display text-xl font-bold text-white tracking-[-0.01em]">
-                Below the Line
-              </h3>
-            </div>
-          </div>
-          <ul className="space-y-3">
-            {nonprofitItems.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-slate-300 text-sm">
-                <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-red-400/60" />
-                {item}
-              </li>
-            ))}
-          </ul>
+      {/* Below the line */}
+      <div className="mt-12">
+        <div className="flex items-center gap-2.5 mb-6">
+          <ShieldAlert size={16} className="text-red-400" />
+          <p className="text-xs font-mono font-semibold uppercase tracking-widest text-red-400">
+            Most Non-Profits — Below the Line
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-3">
+          {nonprofitItems.map((item) => (
+            <p key={item} className="text-sm text-red-300/70 flex items-start gap-2.5">
+              <span className="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-red-400/50" />
+              {item}
+            </p>
+          ))}
         </div>
       </div>
 
-      <div className="mt-10 flex justify-center">
+      <div className="mt-12">
         <a
           href="/who-we-serve"
           className="inline-flex items-center gap-2 text-sm text-pr-cyan-400 hover:text-pr-cyan-300 font-medium transition-colors"
         >
-          Learn about the organizations we serve
+          See who we work with
           <ArrowRight size={16} />
         </a>
       </div>
