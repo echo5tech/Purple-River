@@ -35,31 +35,29 @@ export default function Hero() {
 
           {/* Headline */}
           <h1
-            className="font-display font-bold text-white tracking-[-0.04em] leading-[1.04]"
-            style={{ fontSize: 'clamp(3rem, 8vw, 6rem)' }}
+            className="font-display font-bold text-white tracking-[-0.02em] leading-[1.06]"
+            style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)' }}
           >
-            Enterprise-grade
+            Cybersecurity built
             <br />
-            cybersecurity{' '}
+            for missions, not{' '}
             <span
               style={{
-                background: 'linear-gradient(135deg, #6366F1 0%, #22D3EE 55%, #C4B5FD 100%)',
+                background: 'linear-gradient(135deg, #6366F1 0%, #22D3EE 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
               }}
             >
-              for the missions
-              <br />
-              that need it most.
+              margins.
             </span>
           </h1>
 
           {/* Sub */}
-          <p className="mt-8 text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl font-light tracking-[-0.01em]">
-            1.8 million U.S. non-profits sit below the Security Poverty Line — facing
-            Fortune-500-level threats with zero-dollar security budgets and no dedicated
-            staff. Purple River is here to change that.
+          <p className="mt-8 text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl">
+            Over 1.8 million U.S. non-profits face the same threats as Fortune 500 companies —
+            ransomware, phishing, data theft — with no security staff, no budget, and no one
+            in their corner. That&apos;s the Security Poverty Line. We work below it.
           </p>
 
           {/* CTAs */}
@@ -73,12 +71,11 @@ export default function Hero() {
             </Button>
           </div>
 
-          <p className="mt-5 text-sm text-slate-600 tracking-[-0.01em]">
+          <p className="mt-5 text-sm text-slate-600">
             Selecting our first 3–5 mission partners now. No pitch required.
           </p>
         </div>
 
-        {/* Stat callouts — CrowdStrike-style big numbers */}
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px border border-white/[0.06] rounded-2xl overflow-hidden bg-white/[0.06]">
           {stats.map((stat) => (
             <div
@@ -86,12 +83,12 @@ export default function Hero() {
               className="bg-pr-indigo-950/70 backdrop-blur-xl px-8 py-7 flex flex-col gap-1"
             >
               <span
-                className="font-display font-bold tracking-[-0.04em] text-white"
+                className="font-display font-bold tracking-[-0.02em] text-white"
                 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', lineHeight: 1 }}
               >
                 {stat.value}
               </span>
-              <span className="text-sm text-slate-500 font-medium tracking-[-0.01em]">
+              <span className="text-sm text-slate-500">
                 {stat.label}
               </span>
             </div>

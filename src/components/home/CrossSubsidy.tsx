@@ -46,19 +46,19 @@ export default function CrossSubsidy() {
     <Section>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
-          <EyebrowLabel>Business Model</EyebrowLabel>
-          <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-white tracking-[-0.03em]">
-            The Cross-Subsidy Engine
+          <EyebrowLabel>How We Fund It</EyebrowLabel>
+          <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]">
+            Security that pays it forward.
           </h2>
-          <p className="mt-5 text-slate-400 leading-relaxed tracking-[-0.01em]">
-            Commercial-rate engagements legally cross-subsidize mission-priced delivery.
-            That&apos;s not a workaround — it&apos;s our public benefit purpose, written
-            into our corporate charter.
+          <p className="mt-5 text-slate-400 leading-relaxed">
+            When a larger organization pays market rate for our services, that revenue
+            directly funds discounted and free work for the smallest community organizations.
+            No grants. No fundraising. No dependency on donor cycles.
           </p>
-          <p className="mt-4 text-slate-400 leading-relaxed tracking-[-0.01em]">
-            When a larger organization pays commercial rates for our services, that
-            revenue directly funds deeply discounted and free services for the smallest
-            community organizations. No grants required. No strings attached.
+          <p className="mt-4 text-slate-400 leading-relaxed">
+            This cross-subsidy model is written into our corporate charter as a Public
+            Benefit Corporation — it&apos;s a legal obligation, not a policy we can walk
+            back when revenue gets tight.
           </p>
           <a
             href="/who-we-serve"

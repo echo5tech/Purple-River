@@ -6,28 +6,28 @@ import Link from 'next/link'
 
 const pillars = [
   {
-    eyebrow: 'The Hook',
+    eyebrow: 'Access & Identity',
     icon: KeyRound,
     title: 'Identity & Access Governance',
-    body: "Most non-profit breaches start with a forgotten volunteer account or a missing MFA prompt. We close those doors first.",
+    body: "Most breaches start with a forgotten volunteer account or a missing MFA prompt. We close those doors first — before anything else.",
     href: '/approach#identity',
     iconColor: 'text-pr-cyan-400',
     iconBg: 'bg-pr-cyan-400/10',
   },
   {
-    eyebrow: 'The Differentiator',
+    eyebrow: 'Threat Defense',
     icon: Target,
     title: 'Threat-Informed Defense & Purple Teaming',
-    body: 'Defense built around how attackers actually move — using the MITRE ATT&CK framework — not generic checklists.',
+    body: 'We build your defenses around how real attackers move — using the MITRE ATT&CK framework — not generic compliance checklists.',
     href: '/approach#threat',
     iconColor: 'text-pr-lavender-300',
     iconBg: 'bg-pr-lavender-300/10',
   },
   {
-    eyebrow: 'The Recurring Engine',
+    eyebrow: 'Ongoing Coverage',
     icon: Radio,
-    title: 'Fractional vCISO & MSSP',
-    body: 'Ongoing monitoring, board-level strategy, and the security leader you couldn\'t afford to hire.',
+    title: 'Fractional vCISO & Managed Security',
+    body: 'Continuous monitoring, board-level reporting, and a security leader embedded in your team — without the full-time hire.',
     href: '/approach#vciso',
     iconColor: 'text-pr-blue-500',
     iconBg: 'bg-pr-blue-500/10',
@@ -39,12 +39,12 @@ export default function PillarGrid() {
     <Section className="bg-pr-indigo-900/40">
       <div className="text-center mb-16">
         <EyebrowLabel>How We Work</EyebrowLabel>
-        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-white tracking-tight">
-          Three pillars. One integrated practice.
+        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-white tracking-[-0.02em]">
+          Three services, one practice.
         </h2>
         <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">
-          Each service builds on the last. We start where the risk is highest, then grow
-          with your mission.
+          We start where the risk is highest and build from there. Every engagement connects
+          to the next.
         </p>
       </div>
 

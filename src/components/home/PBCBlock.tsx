@@ -43,20 +43,19 @@ export default function PBCBlock() {
         />
 
         <div className="relative max-w-3xl">
-          <EyebrowLabel>Why a PBC?</EyebrowLabel>
-          <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-white tracking-[-0.03em]">
-            Built as a Public Benefit Corporation
+          <EyebrowLabel>Our Structure</EyebrowLabel>
+          <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]">
+            A Public Benefit Corporation
           </h2>
-          <p className="mt-5 text-slate-400 leading-relaxed text-lg tracking-[-0.01em] font-light">
-            A Public Benefit Corporation is a for-profit company with a legal obligation
-            to pursue a public benefit alongside profit. We chose this structure
-            deliberately — not as a branding exercise.
+          <p className="mt-5 text-slate-400 leading-relaxed text-lg">
+            A PBC is a for-profit company with a legal obligation to pursue public benefit
+            alongside profit. We chose this structure because it makes the mission legally
+            binding — not just aspirational.
           </p>
-          <p className="mt-4 text-slate-400 leading-relaxed tracking-[-0.01em]">
-            Traditional non-profits are grant-dependent and often slow to adapt. Pure
-            for-profits aren&apos;t accountable to mission. The PBC structure gives us
-            the agility of a startup, the accountability of law, and the ability to
-            attract the investment needed to scale our impact.
+          <p className="mt-4 text-slate-400 leading-relaxed">
+            Non-profits live or die by grant cycles. Pure for-profits answer only to
+            revenue. The PBC gives us the speed of a startup, the accountability of law,
+            and the ability to attract the capital needed to reach more organizations.
           </p>
         </div>
 

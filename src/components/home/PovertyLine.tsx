@@ -22,13 +22,14 @@ export default function PovertyLine() {
   return (
     <Section id="poverty-line" className="bg-grid-dots">
       <div className="text-center mb-16">
-        <EyebrowLabel>The Gap We&apos;re Closing</EyebrowLabel>
-        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-white tracking-[-0.03em]">
+        <EyebrowLabel>The Problem</EyebrowLabel>
+        <h2 className="mt-4 font-display text-3xl md:text-5xl font-bold text-white tracking-[-0.01em]">
           The Security Poverty Line
         </h2>
-        <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg font-light tracking-[-0.01em]">
-          The threshold below which organizations face enterprise-level threats without
-          enterprise-level defenses. Most non-profits never cross it alone.
+        <p className="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">
+          The threshold below which organizations face real threats — ransomware, phishing,
+          data theft — without the tools or staff to respond. Most non-profits have always
+          been below it.
         </p>
       </div>
 
@@ -43,7 +44,7 @@ export default function PovertyLine() {
               <p className="text-xs font-mono font-medium uppercase tracking-widest text-pr-ink-500">
                 Fortune 500 Reality
               </p>
-              <h3 className="font-display text-xl font-bold text-white tracking-[-0.02em]">
+              <h3 className="font-display text-xl font-bold text-white tracking-[-0.01em]">
                 Enterprise Security
               </h3>
             </div>
@@ -61,7 +62,7 @@ export default function PovertyLine() {
         {/* Bridge indicator */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-2">
           <div
-            className="flex h-14 w-14 items-center justify-center rounded-full font-display font-bold text-xs text-center text-pr-cyan-400 border border-pr-cyan-400/30"
+            className="flex h-14 w-14 items-center justify-center rounded-full font-display font-bold text-sm text-pr-cyan-400 border border-pr-cyan-400/30"
             style={{
               background: 'rgba(10,11,20,0.9)',
               backdropFilter: 'blur(16px)',
@@ -70,9 +71,6 @@ export default function PovertyLine() {
           >
             PR
           </div>
-          <p className="text-xs text-pr-cyan-400 font-mono font-medium tracking-wider whitespace-nowrap">
-            We bridge the gap
-          </p>
         </div>
 
         {/* Non-profit card */}
@@ -85,7 +83,7 @@ export default function PovertyLine() {
               <p className="text-xs font-mono font-medium uppercase tracking-widest text-pr-ink-500">
                 Non-Profit Reality
               </p>
-              <h3 className="font-display text-xl font-bold text-white tracking-[-0.02em]">
+              <h3 className="font-display text-xl font-bold text-white tracking-[-0.01em]">
                 Below the Line
               </h3>
             </div>
